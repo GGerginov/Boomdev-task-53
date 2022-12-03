@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="main">
-      <div class="card product">
+      <div class="card product" data-price = 8.95>
         <div class="card-image">
           <figure class="image is-4by3">
             <img
@@ -46,5 +46,15 @@
         </div>
       </div>
     </div>
+
+  <script>
+    let elementsByClassName = document.getElementsByClassName("product");
+
+    for (const elementsByClassNameElement of elementsByClassName) {
+      var priceElement = elementsByClassNameElement.querySelector('.price');
+
+      elementsByClassNameElement.setAttribute("data-price", priceElement.innerHTML);
+    }
+  </script>
   </body>
 </html>
